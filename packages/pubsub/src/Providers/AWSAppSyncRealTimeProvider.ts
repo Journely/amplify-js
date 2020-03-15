@@ -569,6 +569,7 @@ export class AWSAppSyncRealTimeProvider extends AbstractPubSubProvider {
 					// Creating websocket url with required query strings
 					const discoverableEndpoint = appSyncGraphqlEndpoint
 						.replace('https://', 'wss://')
+						.replace('http://', 'wss://')
 						.replace('appsync-api', 'appsync-realtime-api')
 						.replace('gogi-beta', 'grt-beta');
 
